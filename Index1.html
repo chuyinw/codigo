@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tengo algo para ti 💌</title>
+
+  <!-- Preview bonito al mandar el link -->
+  <meta property="og:title" content="Tengo algo que decirte 💖">
+  <meta property="og:description" content="Ábrelo, es para ti 💌">
+  <meta property="og:type" content="website">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      text-align: center;
+      padding: 40px 20px;
+      color: #7a003c;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    input {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      width: 80%;
+      max-width: 300px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 25px;
+      border: none;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 30px;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>💖 Tengo algo que preguntarte 💖</h1>
+  <p>Escribe tu nombre 👇</p>
+
+  <input id="nombre" placeholder="Tu nombre...">
+  <br>
+  <button onclick="mostrar()">Ver mensaje 💌</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function mostrar() {
+      const n = document.getElementById("nombre").value;
+      if (!n) {
+        alert("Escribe tu nombre 😊");
+        return;
+      }
+      document.getElementById("resultado").innerHTML =
+        `💘 ${n}, ¿te gustaría ser mi San Valentín? 💘`;
+    }
+  </script>
+
+</body>
+</html>
